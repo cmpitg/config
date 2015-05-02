@@ -1,0 +1,30 @@
+#!/bin/sh
+
+current_file_=$(readlink -f "$0")
+current_dir_=$(dirname ${current_file_})
+
+# Backup if Xmodmap exists
+test -f Xmodmap && (
+    echo "> Backing up: Xmodmap -> Xmodmap.bak"
+    mv Xmodmap Xmodmap.bak
+)
+test -f Xmodmap.altgr && (
+    echo "> Backing up: Xmodmap.altgr -> Xmodmap.altgr.bak"
+    mv Xmodmap.altgr Xmodmap.altgr.bak
+)
+
+echo "> Generating Xmodmap: Programmer Dvorak + Escape/CapsLock swapped + Ctrl/Alt swapped"
+echo "! -*- mode: xmodmap-generic -*-" > Xmodmap
+cat Pieces/Xmodmap-correct-Super \
+    Pieces/Xmodmap-swap-CapsLock-Escape \
+    Pieces/Xmodmap-swap-Control-Alt \
+    >> Xmodmap
+
+echo "> Generating Xmodmap: Programmer Dvorak + right AtlGr + Escape/CapsLock swapped + Ctrl/Alt swapped"
+echo "! -*- mode: xmodmap-generic -*-" > Xmodmap.altgr
+cat Pieces/Xmodmap-correct-Super \
+    Pieces/Xmodmap-swap-CapsLock-Escape \
+    Pieces/Xmodmap-swap-Control-Alt \
+    Pieces/Xmodmap-add-right-AltGr \
+    >> Xmodmap.altgr
+sed -i 's/add mod1 = Alt_R//' Xmodmap.altgr
