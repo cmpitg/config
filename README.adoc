@@ -1,5 +1,20 @@
 My configuration for various tools.
 
+* link:i3[i3 window manager]:
++
+image::Misc/Images/2015-05-02_20:49:42_Selection.jpg[My i3 desktop]
+** Use kbd:[Super] key as window manager modifier as it makes use of a rarely-used
+   modifier:
+*** kbd:[Super + key]: reserved for text editor.
+*** kbd:[Super + Alt + key]: desktop/workspace-related actions.
+*** kbd:[Super + Shift + Alt + key]: screen/monitor-related actions.
+*** kbd:[Super + Ctrl + key] and kbd:[Super + Shift + key]:
+    window/application-related actions.
+** kbd:[Ctrl + Alt + Shift + key]: system-wide-related actions.
+** Suspend is done with http://pm-utils.freedesktop.org/wiki/[`pm-suspend]`
+   (`sudo` {plus} `NOPASSWD` in `sudoers`).
+** Lock-screen is managed via http://www.jwz.org/xscreensaver/[XScreenSaver].
+
 * link:tmux/tmux.conf[Tmux]:
 +
 image::Misc/Images/2015-05-01_11:11:40_Selection.jpg[Status bar]
