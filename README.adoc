@@ -1,3 +1,9 @@
+:Author: Nguyễn Hà Dương (cmpitg)
+:Email: <cmpitg@gmail.com>
+:numbered:
+:icons: font
+:experimental: true
+
 My configuration for various tools.
 
 * link:i3[i3 window manager]:
