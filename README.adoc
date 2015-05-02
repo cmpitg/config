@@ -47,6 +47,23 @@ image::Misc/Images/2015-05-02_20:49:42_Selection.jpg[My i3 desktop]
 * link:xmodmap/produce-xmodmap[`produce-xmodmap`]: A small script to generate
   `Xmodmap` and `Xmodmap.altgr` by putting all pieces together.
 
+=== Panel: link:xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml[XFCE 4 panel]
+
+image::Misc/Images/2015-05-02_Panel.jpg[XFCE 4 panel]
+
+* Small application launcher top-left.
+
+* Hardware status:
+** CPU frequency
+** CPU temperature
+** HDD temperature
+
+* With
+** Notification area
+** XFCE 4 power management applet
+** XFCE 4 mixer applet
+** Clock applet, display full date and time
+
 == Console
 
 === link:tmux/tmux.conf[Tmux]
