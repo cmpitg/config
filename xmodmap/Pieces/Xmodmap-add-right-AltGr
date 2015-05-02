@@ -1,0 +1,2 @@
+! Add AltGr to Alt_R
+add mod5 = Alt_R
