@@ -9,11 +9,14 @@ image::Misc/Images/2015-05-01_11:11:40_Selection.jpg[Status bar]
 
 * Xmodmap:
 ** link:xmodmap/Xmodmap[`Xmodmap`] =
-   link:http://www.kaufmann.no/roland/dvorak/[Programmer Dvorak keymap] +
-   link:xmodmap/Pieces/Xmodmap-swap-Control-Alt[Ctrl/Alt swapped] + link:xmodmap/Pieces/Xmodmap-swap-CapsLock-Escape[Escape/CapsLock swapped]
-** link:xmodmap/Xmodmap[`Xmodmap.altgr`] = link:http://www.kaufmann.no/roland/dvorak/[Programmer Dvorak keymap] +
-   link:xmodmap/Pieces/Xmodmap-swap-Control-Alt[Ctrl/Alt swapped] + link:xmodmap/Pieces/Xmodmap-swap-CapsLock-Escape[Escape/CapsLock swapped]
-   + link:xmodmap/Pieces/Xmodmap-add-right-AltGr[right Alt as AltGr]
+   link:http://www.kaufmann.no/roland/dvorak/[Programmer Dvorak keymap] \+
+   link:xmodmap/Pieces/Xmodmap-swap-Control-Alt[Ctrl/Alt swapped] \+
+   link:xmodmap/Pieces/Xmodmap-swap-CapsLock-Escape[Escape/CapsLock swapped]
+** link:xmodmap/Xmodmap[`Xmodmap.altgr`] =
+   link:http://www.kaufmann.no/roland/dvorak/[Programmer Dvorak keymap] \+
+   link:xmodmap/Pieces/Xmodmap-swap-Control-Alt[Ctrl/Alt swapped] \+
+   link:xmodmap/Pieces/Xmodmap-swap-CapsLock-Escape[Escape/CapsLock swapped]
+   \+ link:xmodmap/Pieces/Xmodmap-add-right-AltGr[right Alt as AltGr]
 ** link:xmodmap/Pieces[Smaller configuration pieces for `Xmodmap`], useful to
    understand how things work.
 ** link:xmodmap/produce-xmodmap[`produce-xmodmap`]: A small script to generate
