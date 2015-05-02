@@ -1,0 +1,10 @@
+timeout=1
+show_cpu=9
+show_icon=true
+show_label_freq=true
+show_label_governor=false
+show_warning=false
+keep_compact=true
+one_line=true
+fontname=Droid Sans 10
+
