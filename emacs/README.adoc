@@ -1,4 +1,0 @@
-= cmpitg's Emacs config
-
-* Emacs server with https://github.com/cmpitg/emnode[Emnode] -- better
-  interaction: cleaner, wider tools, ...
