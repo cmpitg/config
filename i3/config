@@ -45,6 +45,7 @@ bindsym $meta+Shift+$control+Return exec /home/cmpitg/bin/te
 bindsym $meta+Shift+$control+Break  exec gnome-system-monitor
 bindsym $meta+Shift+$control+h      exec /home/cmpitg/bin/firefox-beta-new-instance
 bindsym $meta+Shift+$control+m      exec /home/cmpitg/bin/thunderbird-bin
+bindsym $meta+Shift+$control+bar    exec /home/cmpitg/bin/useful-unicode-symbols
 
 bindsym $mod+$meta+Next         scratchpad show
 bindsym $mod+$control+Next      move scratchpad
