@@ -75,7 +75,7 @@ bindsym $mod+$control+asterisk      move workspace Web-Apps
 bindsym $mod+Escape  workspace back_and_forth
 
 # font for window titles
-font pango:Droid Sans 10
+font pango:Droid Sans 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -187,7 +187,7 @@ bar {
     status_command i3status
     # tray_output primary
     tray_output none
-    font pango:Droid Sans 10
+    font pango:Droid Sans 9
     colors {
         background #000000
         statusline #ffffff
