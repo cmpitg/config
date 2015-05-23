@@ -247,6 +247,4 @@ exec /home/cmpitg/bin/set-default-monitor-config
 exec /home/cmpitg/bin/autostart
 exec xfce4-panel
 exec /home/cmpitg/bin/set-wallpaper
-exec /home/cmpitg/bin/ijaludnaiv
-exec /home/cmpitg/bin/ijaludnaiv
-exec /home/cmpitg/bin/ijaludnaiv
+exec "sh -c 'sleep 10; exec /home/cmpitg/bin/ijaludnaiv'"
