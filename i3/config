@@ -47,7 +47,6 @@ bindsym $mod+Shift+$meta+Home       exec /home/cmpitg/bin/set-default-monitor-co
 # bindsym XF86MonBrightnessUp         exec /home/cmpitg/bin/increase-brightness
 # bindsym XF86MonBrightnessDown       exec /home/cmpitg/bin/decrease-brightness
 
-
 bindsym $mod+$meta+Next         scratchpad show
 bindsym $mod+$control+Next      move scratchpad
 
@@ -77,15 +76,6 @@ bindsym $mod+$control+Right         move workspace next
 # Switch to specific window
 # bindsym $mod+$meta+plus          [title='Dolphin'] focus
 # bindsym $mod+$meta+parenright    [title='SMPlayer'] focus
-
-# Move window to workspace
-bindsym $mod+$control+numbersign    move workspace Emacs
-bindsym $mod+$control+at            move workspace OS
-bindsym $mod+$control+exclam        move workspace _
-bindsym $mod+$control+bracketright  move workspace Web
-bindsym $mod+$control+plus          move workspace File
-bindsym $mod+$control+parenright    move workspace Media
-bindsym $mod+$control+asterisk      move workspace Web-Apps
 
 bindsym $mod+Escape  workspace back_and_forth
 
@@ -251,7 +241,7 @@ popup_during_fullscreen smart
 # Assigning window to workspace
 #
 # assign [class="Firefox"]  WWW
-assign [class="Emacs"]    Emacs
+assign [class="Emacs"] Dev
 
 #
 # Startup
