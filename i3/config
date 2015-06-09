@@ -47,30 +47,32 @@ bindsym $mod+Shift+$meta+Home       exec /home/cmpitg/bin/set-default-monitor-co
 # bindsym XF86MonBrightnessUp         exec /home/cmpitg/bin/increase-brightness
 # bindsym XF86MonBrightnessDown       exec /home/cmpitg/bin/decrease-brightness
 
-# Applications
-bindsym $mod+Tab                    exec i3-switch-window
-bindsym $mod+$meta+Insert           exec i3-rename-workspace
-bindsym $mod+$meta+Home             exec i3-move-to-workspace
-bindsym $mod+dollar                 exec i3-to-workspace
-bindsym $mod+$meta+Return           exec i3-exec-command
-bindsym $control+dollar             exec gmrun
-bindsym $meta+Shift+$control+Return exec /home/cmpitg/bin/te
-bindsym $meta+Shift+$control+Break  exec gnome-system-monitor
-bindsym $meta+Shift+$control+h      exec /home/cmpitg/bin/firefox-beta-new-instance
-bindsym $meta+Shift+$control+m      exec /home/cmpitg/bin/thunderbird-bin
-bindsym $meta+Shift+$control+bar    exec /home/cmpitg/bin/useful-unicode-symbols
 
 bindsym $mod+$meta+Next         scratchpad show
 bindsym $mod+$control+Next      move scratchpad
 
 # Switch to workspace
-bindsym $mod+$meta+numbersign    workspace Emacs
-bindsym $mod+$meta+at            workspace OS
-bindsym $mod+$meta+exclam        workspace _
-bindsym $mod+$meta+bracketright  workspace Web
-bindsym $mod+$meta+plus          workspace File
-bindsym $mod+$meta+parenright    workspace Media
-bindsym $mod+$meta+asterisk      workspace Web-Apps
+bindsym $mod+$meta+numbersign       workspace Dev
+bindsym $mod+$control+numbersign    move workspace Dev
+bindsym $mod+$meta+at               workspace Dashboard
+bindsym $mod+$control+at            move workspace Dashboard
+bindsym $mod+$meta+exclam           workspace _
+bindsym $mod+$control+exclam        move workspace _
+bindsym $mod+$meta+bracketright     workspace Web
+bindsym $mod+$control+bracketright  move workspace Web
+bindsym $mod+$meta+plus             workspace File
+bindsym $mod+$control+plus          move workspace File
+bindsym $mod+$meta+parenright       workspace Dev-Extra
+bindsym $mod+$control+parenright    move workspace Dev-Extra
+bindsym $mod+$meta+asterisk         workspace Mail
+bindsym $mod+$control+asterisk      move workspace Mail
+bindsym $mod+$meta+slash            workspace Temp
+bindsym $mod+$control+slash         move workspace Temp
+
+bindsym $mod+$meta+Left             workspace prev
+bindsym $mod+$control+Left          move workspace prev
+bindsym $mod+$meta+Right            workspace next
+bindsym $mod+$control+Right         move workspace next
 
 # Switch to specific window
 # bindsym $mod+$meta+plus          [title='Dolphin'] focus
