@@ -17,7 +17,9 @@ set $meta     Mod1
 bindsym $control+dollar                exec gmrun
 bindsym $mod+$control+$meta+s          exec /home/cmpitg/bin/suspend-me
 bindsym $mod+$control+$meta+l          exec /home/cmpitg/bin/lockscreen
-bindsym $mod+$control+$meta+backslash  exec /home/cmpitg/bin/ijaludnaiv
+bindsym $mod+$control+$meta+backslash  exec /home/cmpitg/bin/config-keymap-cmpitg
+bindsym $mod+$control+$meta+at         exec /home/cmpitg/bin/config-keymap-altgr
+bindsym $mod+$control+$meta+minus      exec /home/cmpitg/bin/config-keymap-steam
 bindsym $mod+$control+backslash        exec konsole
 bindsym $mod+Tab                       exec i3-switch-window
 bindsym $control+Escape                exec i3-switch-workspace
