@@ -59,42 +59,53 @@ bindsym $mod+$control+Next      move scratchpad
 # bindsym --whole-window button9      workspace ☯
 # bindsym --whole-window button8      workspace ☣
 
+bindsym --whole-window $mod+button9       move left
+bindsym --whole-window $mod+button8       move right
+
+# Desktop
+bindsym $mod+$meta+s                workspace Desktop
+bindsym $mod+$control+s             move workspace Desktop
+
 # Dev
-bindsym $mod+$meta+numbersign       workspace ☯
-bindsym $mod+$control+numbersign    move workspace ☯
-assign [class="Emacs"] ☯
+bindsym $mod+$meta+numbersign       workspace Dev
+bindsym $mod+$control+numbersign    move workspace Dev
+assign [class="Emacs"] Dev
 
 # Dev extra
-bindsym $mod+$meta+parenright       workspace ☕
-bindsym $mod+$control+parenright    move workspace ☕
+bindsym $mod+$meta+at               workspace Dev-Extra
+bindsym $mod+$control+at            move workspace Dev-Extra
 
-# Dashboard
-bindsym $mod+$meta+at               workspace ★
-bindsym $mod+$control+at            move workspace ★
+# Media
+bindsym $mod+$meta+parenright       workspace Media
+bindsym $mod+$control+parenright    move workspace Media
 
 # Command line
-bindsym $mod+$meta+exclam           workspace ☤
-bindsym $mod+$control+exclam        move workspace ☤
+bindsym $mod+$meta+exclam           workspace Cmd
+bindsym $mod+$control+exclam        move workspace Cmd
 
 # Web
-bindsym $mod+$meta+bracketright     workspace ☣
-bindsym $mod+$control+bracketright  move workspace ☣
+bindsym $mod+$meta+bracketright     workspace Web
+bindsym $mod+$control+bracketright  move workspace Web
 
 # File
-bindsym $mod+$meta+plus             workspace ☃
-bindsym $mod+$control+plus          move workspace ☃
+bindsym $mod+$meta+plus             workspace File
+bindsym $mod+$control+plus          move workspace File
 
 # Mail
-bindsym $mod+$meta+asterisk         workspace ☔
-bindsym $mod+$control+asterisk      move workspace ☔
+bindsym $mod+$meta+asterisk         workspace Mail
+bindsym $mod+$control+asterisk      move workspace Mail
 
-# Temp
-bindsym $mod+$meta+slash            workspace ☪
-bindsym $mod+$control+slash         move workspace ☪
+# Dashboard
+bindsym $mod+$meta+slash            workspace Dashboard
+bindsym $mod+$control+slash         move workspace Dashboard
 
 # Communication
-bindsym $mod+$meta+minus            workspace ☉
-bindsym $mod+$control+minus         move workspace ☉
+bindsym $mod+$meta+minus            workspace Comm
+bindsym $mod+$control+minus         move workspace Comm
+
+# Temp
+bindsym $mod+$meta+l                workspace Temp
+bindsym $mod+$control+l             move workspace Temp
 
 bindsym $mod+$meta+Left             workspace prev
 bindsym $mod+$control+Left          move workspace prev
