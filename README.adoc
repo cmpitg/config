@@ -73,4 +73,3 @@ image::Misc/Images/2015-05-01_11:11:40_Selection.jpg[Status bar]
 * Change status bar color, add clock, etc.
 * Enable mouse scrolling and selection.
 * Enable tab changing by clicking.
-
