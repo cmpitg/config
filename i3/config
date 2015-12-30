@@ -267,6 +267,8 @@ for_window [title="^Cinelerra"]            floating enable
 for_window [title="Gtk-recordmydesktop"]   floating enable
 for_window [instance="gtk-recordmydesktop"]   floating enable
 for_window [instance="screenkey"]             floating enable
+for_window [instance="lazarus"]               floating enable
+for_window [instance="Lazarus"]               floating enable
 for_window [instance="cinelerra"]             floating enable
 for_window [instance="^cinelerra"]            floating enable
 for_window [instance="Gtk-recordmydesktop"]   floating enable
@@ -287,8 +289,8 @@ popup_during_fullscreen smart
 #
 # assign [class="Firefox"]  WWW
 
-# # The middle button and a modifer over any part of the window kills the window
-# bindsym --whole-window $mod+button2 kill
+# # The middle button and a modifier over any part of the window kills the
+# window bindsym --whole-window $mod+button2 kill
 
 # # The side buttons move the window around
 # bindsym button9 move left
@@ -298,9 +300,9 @@ popup_during_fullscreen smart
 # Startup
 #
 
-# exec /home/cmpitg/bin/set2monitors
-exec /home/cmpitg/bin/set-default-monitor-config
-exec /home/cmpitg/bin/autostart
+# exec set2monitors
+exec set-default-monitor-config
+exec autostart
 exec xfce4-panel
-exec /home/cmpitg/bin/set-wallpaper
-exec "sh -c 'sleep 10; exec /home/cmpitg/bin/ijaludnaiv'"
+exec set-wallpaper
+exec "sh -c 'sleep 10; exec ijaludnaiv'"
