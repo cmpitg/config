@@ -305,4 +305,4 @@ exec set-default-monitor-config
 exec autostart
 exec xfce4-panel
 exec set-wallpaper
-exec "sh -c 'sleep 10; exec ijaludnaiv'"
+exec "sh -c 'sleep 13; exec config-keymap-cmpitg'"
