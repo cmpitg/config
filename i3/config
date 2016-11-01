@@ -48,6 +48,7 @@ bindsym $mod+Shift+$meta+Home       exec set-default-monitor-config
 
 # bindsym XF86MonBrightnessUp         exec increase-brightness
 # bindsym XF86MonBrightnessDown       exec decrease-brightness
+bindsym XF86AudioMute               exec toggle-mute
 
 bindsym $mod+$meta+Next         scratchpad show
 bindsym $mod+$control+Next      move scratchpad
