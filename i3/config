@@ -305,5 +305,6 @@ popup_during_fullscreen smart
 exec set-default-monitor-config
 exec autostart
 exec xfce4-panel
+exec xfce4-power-manager
 exec set-wallpaper
 exec "sh -c 'sleep 13; exec config-keymap-cmpitg'"
