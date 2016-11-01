@@ -70,7 +70,7 @@ bindsym $mod+$control+s             move workspace Desktop
 # Dev
 bindsym $mod+$meta+numbersign       workspace Dev
 bindsym $mod+$control+numbersign    move workspace Dev
-assign [class="Emacs"] Dev
+# assign [class="Emacs"] Dev
 
 # Dev extra
 bindsym $mod+$meta+at               workspace Dev-Extra
