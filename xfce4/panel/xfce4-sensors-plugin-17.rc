@@ -4,8 +4,8 @@ Show_Labels=true
 Use_Bar_UI=1
 Show_Colored_Bars=true
 Scale=0
-Font_Size=small
-Font_Size_Numerical=1
+Font_Size=medium
+Font_Size_Numerical=2
 Font=Sans 12
 Lines_Size=1
 Update_Interval=60
@@ -13,10 +13,11 @@ Exec_Command=true
 Show_Units=false
 Small_Spacings=true
 Command_Name=xfce4-sensors
-Number_Chips=4
+Number_Chips=5
 Suppress_Hddtemp_Message=false
-Preferred_Width=372
-Preferred_Height=357
+Suppress_Tooltip=true
+Preferred_Width=370
+Preferred_Height=380
 
 [Chip0]
 Name=acpitz-0
@@ -44,15 +45,6 @@ Max=29.80
 Name=coretemp-0
 Number=1
 
-[Chip1_Feature0]
-Id=0
-Address=0
-Name=Physical id 0
-Color=#00B000
-Show=true
-Min=0.00
-Max=48.00
-
 [Chip1_Feature1]
 Id=-1
 Address=1
@@ -60,7 +52,7 @@ Name=Core 0
 Color=#00B000
 Show=true
 Min=0.00
-Max=48.00
+Max=58.00
 
 [Chip1_Feature2]
 Id=-1
@@ -69,7 +61,7 @@ Name=Core 1
 Color=#00B000
 Show=true
 Min=0.00
-Max=46.00
+Max=54.00
 
 [Chip1_Feature3]
 Id=-1
@@ -78,7 +70,7 @@ Name=Core 2
 Color=#00B000
 Show=true
 Min=0.00
-Max=47.00
+Max=51.00
 
 [Chip1_Feature4]
 Id=1
@@ -87,13 +79,44 @@ Name=Core 3
 Color=#00B000
 Show=true
 Min=0.00
-Max=48.00
+Max=56.00
 
 [Chip2]
-Name=Hard disks
+Name=dell_smm-0
 Number=2
 
 [Chip2_Feature0]
+Id=0
+Address=0
+Name=Processor Fan
+Color=#00B000
+Show=true
+Min=1000.00
+Max=3500.00
+
+[Chip2_Feature1]
+Id=1
+Address=1
+Name=CPU
+Color=#00B000
+Show=true
+Min=0.00
+Max=80.00
+
+[Chip2_Feature2]
+Id=2
+Address=2
+Name=GPU
+Color=#00B000
+Show=true
+Min=0.00
+Max=80.00
+
+[Chip3]
+Name=Hard disks
+Number=3
+
+[Chip3_Feature0]
 Id=0
 DeviceName=/dev/sda
 Name=/dev/sda
@@ -102,7 +125,7 @@ Show=true
 Min=10.00
 Max=50.00
 
-[Chip3]
+[Chip4]
 Name=ACPI
-Number=3
+Number=4
 
