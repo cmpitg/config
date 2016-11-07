@@ -21,7 +21,7 @@ bindsym $mod+$control+$meta+l          exec lockscreen
 bindsym $mod+$control+$meta+backslash  exec config-keymap-cmpitg
 bindsym $mod+$control+$meta+at         exec config-keymap-altgr
 bindsym $mod+$control+$meta+minus      exec config-keymap-steam
-bindsym $mod+$control+backslash        exec roxterm
+bindsym $mod+$control+backslash        exec term-emu
 bindsym $mod+Tab                       exec i3-switch-window
 bindsym $control+Escape                exec i3-switch-workspace
 bindsym $meta+dollar                   exec i3-move-to-workspace
