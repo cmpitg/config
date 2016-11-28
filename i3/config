@@ -34,6 +34,12 @@ bindsym $meta+Shift+$control+h         exec firefox-beta-new-instance
 bindsym $meta+Shift+$control+m         exec thunderbird-bin
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
 
+# new_window pixel 5
+# hide_edge_borders both
+
+# When in fullscreen, pop window causes the fullscreen to be deactivated
+popup_during_fullscreen leave_fullscreen
+
 # Set monitors
 # One monitor
 bindsym $mod+Shift+$meta+F12        exec set1monitor
