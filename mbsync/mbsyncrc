@@ -1,0 +1,127 @@
+# -*- mode: text -*-
+
+#
+# $ mkdir -p boxes/cmpitg-at-gmail/
+# $ mbsync -c mbsyncrc -a
+# $ mbsync -c mbsyncrc cmpitg-gmail_useful
+#
+
+#
+# To encrypt the password:
+#
+# * Gen new keys if necessary: gpg2 --gen-key
+#
+# * Put password in a file: .main.pass
+#
+# * Encrypt the password: gpg2 -r <email> -e .main.pass
+#
+# * Check if there is a .main.pass.gpg exists, if yes, remove the original
+#   password file: rm .main.pass
+#
+# * Decrypt with: gpg2 -q --for-your-eyes-only --no-tty -d .main.pass.gpg
+#
+
+###############################################################################
+# Accounts
+###############################################################################
+
+IMAPAccount cmpitg-at-gmail
+Host imap.gmail.com
+User cmpitg@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.main.pass.gpg"
+UseIMAPS yes
+RequireSSL yes
+
+###############################################################################
+# Stores
+###############################################################################
+
+IMAPStore remote_cmpitg-at-gmail
+Account cmpitg-at-gmail
+
+MaildirStore local_cmpitg-at-gmail
+Path /m/mail/boxes/cmpitg-at-gmail/
+Inbox /m/mail/boxes/cmpitg-at-gmail/Inbox/
+
+###############################################################################
+# Channel: Unifying cmpitg@Gmail
+###############################################################################
+
+Channel cmpitg-gmail_all
+Master :remote_cmpitg-at-gmail:
+Slave :local_cmpitg-at-gmail:
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred"
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_main
+Master :remote_cmpitg-at-gmail:
+Slave :local_cmpitg-at-gmail:
+Patterns "INBOX"
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_todo
+Master :remote_cmpitg-at-gmail:":toplevel/:todo"
+Slave :local_cmpitg-at-gmail:top-todo
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_info
+Master :remote_cmpitg-at-gmail:":toplevel/:info"
+Slave :local_cmpitg-at-gmail:top-info
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_knowledge
+Master :remote_cmpitg-at-gmail:":toplevel/:knowledge"
+Slave :local_cmpitg-at-gmail:top-knowledge
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_delegated
+Master :remote_cmpitg-at-gmail:":toplevel/:delegated"
+Slave :local_cmpitg-at-gmail:top-delegated
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_awaiting
+Master :remote_cmpitg-at-gmail:":toplevel/:awaiting"
+Slave :local_cmpitg-at-gmail:top-awaiting
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_sent
+Master :remote_cmpitg-at-gmail:"[Gmail]/Sent Mail"
+Slave :local_cmpitg-at-gmail:sent
+Create Both
+SyncState *
+Expunge Both
+
+Channel cmpitg-gmail_draft
+Master :remote_cmpitg-at-gmail:"[Gmail]/Drafts"
+Slave :local_cmpitg-at-gmail:draft
+Create Both
+SyncState *
+Expunge Both
+
+###############################################################################
+# Group for easy sync'ing
+###############################################################################
+
+Group cmpitg-gmail_useful
+Channel cmpitg-gmail_main
+Channel cmpitg-gmail_todo
+Channel cmpitg-gmail_delegated
+Channel cmpitg-gmail_awaiting
+Channel cmpitg-gmail_sent
+Channel cmpitg-gmail_info
+Channel cmpitg-gmail_knowledge
+Channel cmpitg-gmail_draft
