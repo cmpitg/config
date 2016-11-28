@@ -73,3 +73,14 @@ image::Misc/Images/2015-05-01_11:11:40_Selection.jpg[Status bar]
 * Change status bar color, add clock, etc.
 * Enable mouse scrolling and selection.
 * Enable tab changing by clicking.
+* https://github.com/tmux-plugins/tpm[Tmux Plugin Manager] with plugins:
+** https://github.com/tmux-plugins/tmux-sensible[tmux-sensible] - Sensible
+   default
+** https://github.com/tmux-plugins/tmux-copycat[tmux-copycat] - Enhanced search
+
+== Mail syncing with Mbsync
+
+* Path: `/m/mail`
+* Only fetch what's significant
+* Channels merging
+* PGP-protected, local only password
