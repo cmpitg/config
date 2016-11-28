@@ -21,7 +21,7 @@ bindsym $mod+$control+$meta+l          exec lockscreen
 bindsym $mod+$control+$meta+backslash  exec config-keymap-cmpitg
 bindsym $mod+$control+$meta+at         exec config-keymap-altgr
 bindsym $mod+$control+$meta+minus      exec config-keymap-steam
-bindsym $mod+$control+backslash        exec roxterm
+bindsym $mod+$control+backslash        exec term-emu
 bindsym $mod+Tab                       exec i3-switch-window
 bindsym $control+Escape                exec i3-switch-workspace
 bindsym $meta+dollar                   exec i3-move-to-workspace
@@ -33,6 +33,7 @@ bindsym $meta+Shift+$control+Break     exec gnome-system-monitor
 bindsym $meta+Shift+$control+h         exec firefox-beta-new-instance
 bindsym $meta+Shift+$control+m         exec thunderbird-bin
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
+bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
 
 # new_window pixel 5
 # hide_edge_borders both
@@ -54,6 +55,7 @@ bindsym $mod+Shift+$meta+Home       exec set-default-monitor-config
 
 # bindsym XF86MonBrightnessUp         exec increase-brightness
 # bindsym XF86MonBrightnessDown       exec decrease-brightness
+bindsym XF86AudioMute               exec toggle-mute
 
 bindsym $mod+$meta+Next         scratchpad show
 bindsym $mod+$control+Next      move scratchpad
@@ -75,7 +77,7 @@ bindsym $mod+$control+s             move workspace Desktop
 # Dev
 bindsym $mod+$meta+numbersign       workspace Dev
 bindsym $mod+$control+numbersign    move workspace Dev
-assign [class="Emacs"] Dev
+# assign [class="Emacs"] Dev
 
 # Dev extra
 bindsym $mod+$meta+at               workspace Dev-Extra
@@ -310,5 +312,6 @@ popup_during_fullscreen smart
 exec set-default-monitor-config
 exec autostart
 exec xfce4-panel
+exec xfce4-power-manager
 exec set-wallpaper
-exec "sh -c 'sleep 10; exec ijaludnaiv'"
+exec "sh -c 'sleep 13; exec config-keymap-cmpitg'"
