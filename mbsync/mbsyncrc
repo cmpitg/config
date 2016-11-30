@@ -1,8 +1,12 @@
 # -*- mode: text -*-
 
 #
-# $ mkdir -p boxes/cmpitg-at-gmail/
+# $ mkdir -p /m/mail/boxes/<box-name>
+#
+# Sync all
 # $ mbsync -c mbsyncrc -a
+#
+# Sync a channel/group
 # $ mbsync -c mbsyncrc cmpitg-gmail_useful
 #
 
@@ -32,6 +36,14 @@ PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.main.pass.gpg"
 UseIMAPS yes
 RequireSSL yes
 
+IMAPAccount hd-at-mamk
+Host imap.metropolia.fi
+User duongng
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.hd-at-mamk.pass.gpg"
+UseIMAPS yes
+# RequireSSL yes
+UseTLSv1 yes
+
 ###############################################################################
 # Stores
 ###############################################################################
@@ -42,6 +54,15 @@ Account cmpitg-at-gmail
 MaildirStore local_cmpitg-at-gmail
 Path /m/mail/boxes/cmpitg-at-gmail/
 Inbox /m/mail/boxes/cmpitg-at-gmail/Inbox/
+
+###############################################################################
+
+IMAPStore remote_hd-at-mamk
+Account hd-at-mamk
+
+MaildirStore local_hd-at-mamk
+Path /m/mail/boxes/hd-at-mamk/
+Inbox /m/mail/boxes/hd-at-mamk/Inbox/
 
 ###############################################################################
 # Channel: Unifying cmpitg@Gmail
@@ -111,6 +132,16 @@ Slave :local_cmpitg-at-gmail:draft
 Create Both
 SyncState *
 Expunge Both
+
+###############################################################################
+
+Channel hd-at-mamk_all
+Master :remote_hd-at-mamk:
+Slave :local_hd-at-mamk:
+Patterns *
+Create Both
+SyncState *
+# Expunge Both
 
 ###############################################################################
 # Group for easy sync'ing
