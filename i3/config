@@ -21,7 +21,7 @@ bindsym $mod+$control+$meta+l          exec lockscreen
 bindsym $mod+$control+$meta+backslash  exec config-keymap-cmpitg
 bindsym $mod+$control+$meta+at         exec config-keymap-altgr
 bindsym $mod+$control+$meta+minus      exec config-keymap-steam
-bindsym $mod+$control+backslash        exec roxterm
+bindsym $mod+$control+backslash        exec term-emu
 bindsym $mod+Tab                       exec i3-switch-window
 bindsym $control+Escape                exec i3-switch-workspace
 bindsym $meta+dollar                   exec i3-move-to-workspace
@@ -33,6 +33,13 @@ bindsym $meta+Shift+$control+Break     exec gnome-system-monitor
 bindsym $meta+Shift+$control+h         exec firefox-beta-new-instance
 bindsym $meta+Shift+$control+m         exec thunderbird-bin
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
+bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
+
+# new_window pixel 5
+# hide_edge_borders both
+
+# When in fullscreen, pop window causes the fullscreen to be deactivated
+popup_during_fullscreen leave_fullscreen
 
 # Set monitors
 # One monitor
