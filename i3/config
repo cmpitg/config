@@ -1,8 +1,7 @@
 #
-# i3 config file (v4)
+# i3 config file v4
 #
-
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Reference: http://i3wm.org/docs/userguide.html
 #
 # Emacs-like keybinding: https://faq.i3wm.org/question/360/emacs-like-keybinding/
 #
@@ -11,9 +10,10 @@ set $mod      Mod4
 set $control  control
 set $meta     Mod1
 
-#
-# Application
-#
+##############################################################################
+# Applications
+##############################################################################
+
 bindsym $control+dollar                exec gmrun
 bindsym $control+ampersand             exec gmrun
 bindsym $mod+$control+$meta+s          exec suspend-me
@@ -35,40 +35,30 @@ bindsym $meta+Shift+$control+m         exec thunderbird-bin
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
 bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
 
-# new_window pixel 5
-# hide_edge_borders both
-
-# When in fullscreen, pop window causes the fullscreen to be deactivated
-popup_during_fullscreen leave_fullscreen
-
-# Set monitors
-# One monitor
-bindsym $mod+Shift+$meta+F12        exec set1monitor
-# Home: VGA1 (main) + Internal
-bindsym $mod+Shift+$meta+F11        exec set2monitors-home
-# Outside: HDMI1 + Internal (main)
-bindsym $mod+Shift+$meta+F10        exec set2monitors-hdmi
-# Outside: VGA1 + Internal (main)
-bindsym $mod+Shift+$meta+F9         exec set2monitors
-# Let the script guess
-bindsym $mod+Shift+$meta+Home       exec set-default-monitor-config
-
-# bindsym XF86MonBrightnessUp         exec increase-brightness
-# bindsym XF86MonBrightnessDown       exec decrease-brightness
 bindsym XF86AudioMute               exec toggle-mute
 
-bindsym $mod+$meta+Next         scratchpad show
-bindsym $mod+$control+Next      move scratchpad
+# # Set monitors
+# # One monitor
+# bindsym $mod+Shift+$meta+F12        exec set1monitor
+# # Home: VGA1 (main) + Internal
+# bindsym $mod+Shift+$meta+F11        exec set2monitors-home
+# # Outside: HDMI1 + Internal (main)
+# bindsym $mod+Shift+$meta+F10        exec set2monitors-hdmi
+# # Outside: VGA1 + Internal (main)
+# bindsym $mod+Shift+$meta+F9         exec set2monitors
+# # Let the script guess
+# bindsym $mod+Shift+$meta+Home       exec set-default-monitor-config
 
-#
-# Switch to workspace
-#
-
-# bindsym --whole-window button9      workspace ☯
-# bindsym --whole-window button8      workspace ☣
+##############################################################################
+# Workspace
+##############################################################################
 
 bindsym --whole-window $mod+button9       move left
 bindsym --whole-window $mod+button8       move right
+
+# Scratchpad
+bindsym $mod+$meta+Next             scratchpad show
+bindsym $mod+$control+Next          move scratchpad
 
 # Desktop
 bindsym $mod+$meta+s                workspace Desktop
@@ -121,73 +111,70 @@ bindsym $mod+$meta+Right            workspace next
 bindsym $mod+$control+Right         move workspace next
 
 # Switch to specific window
-# bindsym $mod+$meta+plus          [title='Dolphin'] focus
 # bindsym $mod+$meta+parenright    [title='SMPlayer'] focus
 
-bindsym $mod+Escape  workspace back_and_forth
+bindsym $mod+Escape                workspace back_and_forth
 
-# font for window titles
-font pango:Droid Sans 9
+default_orientation auto
+# workspace_layout tabbed
+workspace_layout stacking
+popup_during_fullscreen smart
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+##############################################################################
+# Window
+##############################################################################
+
+# When in fullscreen, pop window causes the fullscreen to be deactivated
+popup_during_fullscreen leave_fullscreen
+
+# Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# kill focused window
 bindsym $mod+$control+q kill
 bindsym $mod+Delete kill
 
-# change focus
 bindsym $mod+$control+h focus left
 bindsym $mod+$control+c focus up
 bindsym $mod+$control+t focus down
 bindsym $mod+$control+n focus right
-# alternatively, you can use the cursor keys:
+
 bindsym $mod+Left  focus left
 bindsym $mod+Down  focus down
 bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
-# move focused window
 bindsym $mod+$control+Shift+H move left
 bindsym $mod+$control+Shift+C move up
 bindsym $mod+$control+Shift+T move down
 bindsym $mod+$control+Shift+N move right
-# alternatively, you can use the cursor keys:
+
 bindsym $mod+Shift+Left  move left
 bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# Horizontal split
 bindsym $mod+$control+g split h
-# split in vertical orientation
+# Vertical split
 bindsym $mod+$control+r split v
 
-# enter fullscreen mode for the focused container
 bindsym $mod+$control+f fullscreen
 
-# change container layout (stacked, tabbed, default)
+# Change container layout (stacked, tabbed, default)
 bindsym $mod+$control+w layout stacking
 bindsym $mod+$control+v layout tabbed
 bindsym $mod+$control+z layout default
 
-# toggle tiling / floating
+# Toggle tiling/floating
 bindsym $mod+$control+BackSpace floating toggle
 
-# change focus beteen tiling / floating windows
+# Change focus between tiling/floating windows
 bindsym $mod+$control+space focus mode_toggle
 
-# focus the parent container
+# Focus the parent container
 bindsym $mod+$control+Return focus parent
-# focus the child container
+# Focus the child container
 bindsym $mod+Shift+$control+Return focus child
-
-# reload the configuration file
-bindsym $mod+$meta+$control+R reload
-#bindsym $mod+$control+r reload
-# restart i2 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+$meta+$control+BackSpace restart
-bindsym $mod+$meta+$control+Q exit
 
 bindsym $mod+$control+F9   move container to output left
 bindsym $mod+$control+F10  move container to output right
@@ -196,12 +183,36 @@ bindsym $mod+$meta+F9   move workspace to output left
 bindsym $mod+$meta+F10  move workspace to output right
 
 # Middle clicking on title bar kills the window
-bindsym --release button2 kill
+# bindsym --release button2 kill
+
+# The middle button and a modifier over any part of the window kills the
+bindsym --whole-window $mod+button2 kill
 
 # Right clicking on title bar toggle floating
 bindsym button3 floating toggle
 
-# resize window (you can also use the mouse for that)
+##############################################################################
+# i3 control
+##############################################################################
+
+# Reload the configuration file
+bindsym $mod+$meta+$control+R reload
+#bindsym $mod+$control+r reload
+
+# Restart i3 in-place
+bindsym $mod+$meta+$control+BackSpace restart
+bindsym $mod+$meta+$control+Q exit
+
+##############################################################################
+# Style
+##############################################################################
+
+# Window title
+font pango:Droid Sans 9
+
+# new_window pixel 5
+# hide_edge_borders both
+
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
 
@@ -245,7 +256,7 @@ bar {
     status_command i3status
     # tray_output primary
     tray_output none
-    font pango:Droid Sans 9
+    font pango:Open Sans 9
     colors {
         background #000000
         statusline #ffffff
@@ -263,9 +274,10 @@ client.focused_inactive #333333 #555555 #f6f6f6 #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
-#
-# window-matching rules
-#
+##############################################################################
+# Window-matching rules
+##############################################################################
+
 for_window [title="Execute program feat"]  floating enable
 for_window [title="Copying"]               floating enable
 for_window [title="Moving"]                floating enable
@@ -284,29 +296,9 @@ for_window [instance="^gtk-recordMyDesktop"]  floating enable
 for_window [title="^gtk-recordMyDesktop"]     floating enable
 # for_window [instance="^VCLSalFrame"]       floating enable
 
-#
-# Workspace settings
-#
-default_orientation auto
-# workspace_layout tabbed
-workspace_layout stacking
-popup_during_fullscreen smart
-
-#
-# Assigning window to workspace
-#
-# assign [class="Firefox"]  WWW
-
-# # The middle button and a modifier over any part of the window kills the
-# window bindsym --whole-window $mod+button2 kill
-
-# # The side buttons move the window around
-# bindsym button9 move left
-# bindsym button8 move right
-
-#
+##############################################################################
 # Startup
-#
+##############################################################################
 
 # exec set2monitors
 exec set-default-monitor-config
