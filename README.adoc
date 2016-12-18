@@ -64,6 +64,11 @@ image::Misc/Images/2015-05-02_Panel.jpg[XFCE 4 panel]
 ** XFCE 4 mixer applet
 ** Clock applet, display full date and time
 
+== Fontconfig
+
+* Replacing _Monospace_, _Courier_, and _Courier New_ with _Droid Sans Mono_.
+* Replacing _Sans_ and _Serif_ with _Droid Serif_.
+
 == Console
 
 === link:tmux/tmux.conf[Tmux]
