@@ -13,7 +13,7 @@
 #
 # To encrypt the password:
 #
-# * Gen new keys if necessary: gpg2 --gen-key
+# * Gen new keys if necessary: gpg2 --full-generate-key
 #
 # * Put password in a file: .main.pass
 #
