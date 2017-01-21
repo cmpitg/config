@@ -33,16 +33,22 @@ IMAPAccount cmpitg-at-gmail
 Host imap.gmail.com
 User cmpitg@gmail.com
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.main.pass.gpg"
-UseIMAPS yes
-RequireSSL yes
+## Deprecated
+# UseIMAPS yes
+# RequireSSL yes
+## Use this instead
+SSLType IMAPS
+SSLVersions TLSv1.2
 
 IMAPAccount hd-at-mamk
 Host imap.metropolia.fi
 User duongng
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.hd-at-mamk.pass.gpg"
-UseIMAPS yes
+# UseIMAPS yes
 # RequireSSL yes
-UseTLSv1 yes
+# UseTLSv1 yes
+SSLType IMAPS
+SSLVersions TLSv1.2
 
 ###############################################################################
 # Stores
