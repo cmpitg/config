@@ -30,8 +30,8 @@ bindsym $mod+$meta+Insert              exec i3-rename-workspace
 bindsym $mod+$meta+Return              exec i3-exec-command
 bindsym $meta+Shift+$control+Return    exec ff
 bindsym $meta+Shift+$control+Break     exec gnome-system-monitor
-bindsym $meta+Shift+$control+h         exec firefox-beta-new-instance
-bindsym $meta+Shift+$control+m         exec thunderbird-bin
+bindsym $meta+Shift+$control+h         exec web-browser-gui
+bindsym $meta+Shift+$control+m         exec mail-browser-gui
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
 bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
 
