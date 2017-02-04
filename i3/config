@@ -33,7 +33,8 @@ bindsym $meta+Shift+$control+Break     exec gnome-system-monitor
 bindsym $meta+Shift+$control+h         exec web-browser-gui
 bindsym $meta+Shift+$control+m         exec mail-browser-gui
 bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
-bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
+# bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
+bindsym $mod+Print                     exec shutter --select
 
 bindsym XF86AudioMute               exec toggle-mute
 
