@@ -36,7 +36,7 @@ bindsym $meta+Shift+$control+bar       exec useful-unicode-symbols
 # bindsym $mod+Print                     exec shutter --exit_after_capture --no_session --select
 bindsym $mod+Print                     exec shutter --select
 
-bindsym XF86AudioMute               exec toggle-mute
+bindsym XF86AudioMute               exec audio-toggle-mute
 
 # # Set monitors
 # # One monitor
