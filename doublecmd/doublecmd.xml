@@ -56,7 +56,7 @@
     <WlxPlugins>
       <WlxPlugin Enabled="True">
         <Name>wlxMplayer</Name>
-        <Path>%COMMANDER_PATH%/plugins/wlx/wlxmplayer/wlxmplayer.wlx</Path>
+        <Path>%commander_path%/plugins/wlx/wlxmplayer/lib/wlxmplayer.wlx</Path>
         <DetectString>(EXT="MPG")|(EXT="AVI")|(EXT="MPEG")|(EXT="FLV")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
@@ -492,17 +492,23 @@
       <CopyTime>True</CopyTime>
       <CopyOwnership>True</CopyOwnership>
       <CopyPermissions>False</CopyPermissions>
+      <Verify>False</Verify>
+      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
     </Options>
     <HashBufferSize>8388608</HashBufferSize>
     <SearchDefaultTemplate/>
+    <InitiallyClearFileMask>True</InitiallyClearFileMask>
+    <NewSearchClearFiltersAction>0</NewSearchClearFiltersAction>
+    <ShowMenuBarInFindFiles>True</ShowMenuBarInFindFiles>
+    <AutoExtractOpenMask/>
   </FileOperations>
   <Tabs>
-    <Options>54033</Options>
+    <Options>49937</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <OpenedTabs>
       <Left>
-        <ActiveTab>45</ActiveTab>
+        <ActiveTab>51</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -5368,7 +5374,7 @@
           <CursorColor>-2147483635</CursorColor>
           <CursorText>-2147483634</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -5379,15 +5385,16 @@
   <MainWindow>
     <Position>
       <Left>2</Left>
-      <Top>61</Top>
+      <Top>43</Top>
       <Width>1676</Width>
-      <Height>964</Height>
+      <Height>982</Height>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
   <Editor>
     <SynEditOptions>856075</SynEditOptions>
+    <EditWaitTime>2000</EditWaitTime>
   </Editor>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>
@@ -5475,4 +5482,17 @@
     <LastPreset/>
     <Presets/>
   </MultiRenamePresets>
+  <Description>
+    <CreateNewUnicode>True</CreateNewUnicode>
+    <DefaultEncoding>2</DefaultEncoding>
+    <CreateNewEncoding>3</CreateNewEncoding>
+  </Description>
+  <HotKeySortOrder>1</HotKeySortOrder>
+  <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
+  <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
+  <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
+  <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
+  <MarkShowWantedAttribute>False</MarkShowWantedAttribute>
+  <MarkDefaultWantedAttribute/>
+  <MarkLastWantedAttribute/>
 </doublecmd>
