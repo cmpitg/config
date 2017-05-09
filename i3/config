@@ -14,8 +14,8 @@ set $meta     Mod1
 # Applications
 ##############################################################################
 
-bindsym $control+dollar                exec dash -c 'gmrun'
-bindsym $control+ampersand             exec dash -c 'gmrun'
+bindsym $control+dollar                exec run-with-new-env gmrun
+bindsym $control+ampersand             exec run-with-new-env gmrun
 bindsym $mod+$control+$meta+s          exec suspend-me
 bindsym $mod+$control+$meta+l          exec lockscreen
 bindsym $mod+$control+$meta+backslash  exec config-keymap-cmpitg
