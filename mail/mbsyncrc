@@ -50,6 +50,13 @@ PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.hd-at-mamk.pass.gpg"
 SSLType IMAPS
 SSLVersions TLSv1.2
 
+IMAPAccount hd-at-buddify
+Host imappro.zoho.com
+User haduong.nguyen@buddify.io
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d /m/mail/.hd-at-buddify.pass.gpg"
+SSLType IMAPS
+SSLVersions TLSv1.2
+
 ###############################################################################
 # Stores
 ###############################################################################
@@ -69,6 +76,15 @@ Account hd-at-mamk
 MaildirStore local_hd-at-mamk
 Path /m/mail/boxes/hd-at-mamk/
 Inbox /m/mail/boxes/hd-at-mamk/Inbox/
+
+###############################################################################
+
+IMAPStore remote_hd-at-buddify
+Account hd-at-buddify
+
+MaildirStore local_hd-at-buddify
+Path /m/mail/boxes/hd-at-buddify/
+Inbox /m/mail/boxes/hd-at-buddify/Inbox/
 
 ###############################################################################
 # Channel: Unifying cmpitg@Gmail
@@ -144,6 +160,16 @@ Expunge Both
 Channel hd-at-mamk_all
 Master :remote_hd-at-mamk:
 Slave :local_hd-at-mamk:
+Patterns *
+Create Both
+SyncState *
+# Expunge Both
+
+###############################################################################
+
+Channel hd-at-buddify_all
+Master :remote_hd-at-buddify:
+Slave :local_hd-at-buddify:
 Patterns *
 Create Both
 SyncState *
