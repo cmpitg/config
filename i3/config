@@ -125,6 +125,9 @@ popup_during_fullscreen smart
 # Window
 ##############################################################################
 
+# Don't move the mouse to the other screen when changing
+# mouse_warping none
+
 # When in fullscreen, pop window causes the fullscreen to be deactivated
 popup_during_fullscreen leave_fullscreen
 
@@ -278,6 +281,9 @@ client.urgent           #2f343a #900000 #ffffff #900000
 ##############################################################################
 # Window-matching rules
 ##############################################################################
+
+# Force floating for all new windows
+for_window [class="[.]*"] floating enable
 
 for_window [title="Execute program feat"]  floating enable
 for_window [title="Copying"]               floating enable
