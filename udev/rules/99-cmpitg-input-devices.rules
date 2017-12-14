@@ -1,0 +1,5 @@
+SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c246", \
+	OWNER="hdn", \
+	ENV{USER_ID}="1000", \
+	ENV{DEVICE_NAME}="Logitech Gaming Mouse G300", \
+	RUN+="/m/config/udev/bin/run-from-udev config-logitech-g300-mouse"

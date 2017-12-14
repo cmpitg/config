@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -o xtrace
+set -o nounset
+: "${USER_ID}"
+: "${DEVICE_NAME}"
+
+export USER="$(getent passwd ${USER_ID} | cut -d: -f1)"
+export HOME="/home/${USER}"
+export DISPLAY=":0"
+export XAUTHORITY="${HOME}/.Xauthority"
+export PATH="/m/bin:/m/config/udev/bin:/home/${USER}/bin:${PATH}"
+
+timeout_=${TIMEOUT:-1}
+cmd_="${1}"
+lockfile_="/var/lock/$(basename ${cmd_})"
+
+sudo "DISPLAY=${DISPLAY}" \
+	 "XAUTHORITY=${XAUTHORITY}" \
+	 "PATH=${PATH}" \
+	 -u "${USER}" -E \
+	 flock --exclusive --nonblock "${lockfile_}" --command "( sleep ${timeout_} && ${cmd_} ) &"
+
+## Same effect as manual sleeping
+# sudo "DISPLAY=${DISPLAY}" \
+# 	 "XAUTHORITY=${XAUTHORITY}" \
+# 	 "PATH=${PATH}" \
+# 	 -u "${USER}" -E \
+# 	 flock --exclusive --nonblock "${lockfile_}" --command "( wait-for-xinput \"${DEVICE_NAME}\" && ${cmd_} ) &"
+
+## Doesn't work due to X resets something after execution
+# sudo "DISPLAY=${DISPLAY}" \
+# 	 "XAUTHORITY=${XAUTHORITY}" \
+# 	 "PATH=${PATH}" \
+# 	 -u "${USER}" -E \
+# 	 flock --exclusive --nonblock "${lockfile_}" --command "${cmd_} &"
