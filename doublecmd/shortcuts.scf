@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<doublecmd DCVersion="0.8.0 alpha">
-  <Hotkeys Version="40">
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd DCVersion="0.9.0 alpha">
+  <Hotkeys Version="43">
     <Form Name="Main">
+      <Hotkey>
+        <Shortcut>F1</Shortcut>
+        <Command>cm_About</Command>
+      </Hotkey>
       <Hotkey>
         <Shortcut>F2</Shortcut>
         <Command>cm_RenameOnly</Command>
@@ -48,6 +52,10 @@
         <Command>cm_ShowCmdLineHistory</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+Down</Shortcut>
+        <Command>cm_ShowCmdLineHistory</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Ctrl+B</Shortcut>
         <Command>cm_FlatView</Command>
       </Hotkey>
@@ -64,12 +72,16 @@
         <Command>cm_DirHistory</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+L</Shortcut>
-        <Command>cm_CalculateSpace</Command>
+        <Shortcut>Alt+Down</Shortcut>
+        <Command>cm_DirHistory</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+M</Shortcut>
         <Command>cm_MultiRename</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+O</Shortcut>
+        <Command>cm_ToggleFullscreenConsole</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+P</Shortcut>
@@ -96,24 +108,12 @@
         <Command>cm_Exchange</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+W</Shortcut>
-        <Command>cm_CloseTab</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F1</Shortcut>
         <Command>cm_BriefView</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+F2</Shortcut>
-        <Command>cm_ColumnsView</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+F3</Shortcut>
         <Command>cm_SortByName</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+F4</Shortcut>
-        <Command>cm_SortByExt</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+F5</Shortcut>
@@ -156,11 +156,19 @@
         <Command>cm_AddPathAndFilenameToCmdLine</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Shift+Tab</Shortcut>
+        <Shortcut>Ctrl+PgUp</Shortcut>
         <Command>cm_PrevTab</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Tab</Shortcut>
+        <Shortcut>Ctrl+Shift+F7</Shortcut>
+        <Command>cm_AddNewSearch</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+F8</Shortcut>
+        <Command>cm_TreeView</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+PgDn</Shortcut>
         <Command>cm_NextTab</Command>
       </Hotkey>
       <Hotkey>
@@ -190,6 +198,10 @@
       <Hotkey>
         <Shortcut>Shift+F10</Shortcut>
         <Command>cm_ContextMenu</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Shift+F12</Shortcut>
+        <Command>cm_DoAnyCmCommand</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Alt+V</Shortcut>
@@ -248,44 +260,12 @@
         <Command>cm_TestArchive</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+K</Shortcut>
+        <Shortcut>Ctrl+F4</Shortcut>
+        <Command>cm_CloseTab</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+L</Shortcut>
         <Command>cm_EditPath</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>F1</Shortcut>
-        <Command>cm_About</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Down</Shortcut>
-        <Command>cm_ShowCmdLineHistory</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Alt+Down</Shortcut>
-        <Command>cm_DirHistory</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+O</Shortcut>
-        <Command>cm_ToggleFullscreenConsole</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Shift+F8</Shortcut>
-        <Command>cm_TreeView</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Shift+F12</Shortcut>
-        <Command>cm_DoAnyCmCommand</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+PgDn</Shortcut>
-        <Command>cm_NextTab</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+PgUp</Shortcut>
-        <Command>cm_PrevTab</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Shift+F7</Shortcut>
-        <Command>cm_AddNewSearch</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Del</Shortcut>
@@ -339,22 +319,12 @@
         <Control>Files Panel</Control>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+C</Shortcut>
-        <Command>cm_CopyToClipboard</Command>
+        <Shortcut>Ctrl+Z</Shortcut>
+        <Command>cm_EditComment</Command>
         <Control>Files Panel</Control>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+V</Shortcut>
-        <Command>cm_PasteFromClipboard</Command>
-        <Control>Files Panel</Control>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+X</Shortcut>
-        <Command>cm_CutToClipboard</Command>
-        <Control>Files Panel</Control>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Home</Shortcut>
+        <Shortcut>Ctrl+Shift+Home</Shortcut>
         <Command>cm_ChangeDirToHome</Command>
         <Control>Files Panel</Control>
       </Hotkey>
@@ -374,8 +344,18 @@
         <Control>Files Panel</Control>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Z</Shortcut>
-        <Command>cm_EditComment</Command>
+        <Shortcut>Ctrl+C</Shortcut>
+        <Command>cm_CopyToClipboard</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+V</Shortcut>
+        <Command>cm_PasteFromClipboard</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+X</Shortcut>
+        <Command>cm_CutToClipboard</Command>
         <Control>Files Panel</Control>
       </Hotkey>
     </Form>
@@ -393,7 +373,15 @@
         <Command>cm_LoadNextFile</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Right</Shortcut>
+        <Command>cm_LoadNextFile</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>P</Shortcut>
+        <Command>cm_LoadPrevFile</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Left</Shortcut>
         <Command>cm_LoadPrevFile</Command>
       </Hotkey>
       <Hotkey>
@@ -453,14 +441,6 @@
         <Command>cm_FindPrev</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+C</Shortcut>
-        <Command>cm_CopyToClipboard</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+A</Shortcut>
-        <Command>cm_SelectAll</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>`</Shortcut>
         <Command>cm_Preview</Command>
       </Hotkey>
@@ -475,6 +455,34 @@
       <Hotkey>
         <Shortcut>Alt+Enter</Shortcut>
         <Command>cm_Fullscreen</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+A</Shortcut>
+        <Command>cm_SelectAll</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+C</Shortcut>
+        <Command>cm_CopyToClipboard</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>A</Shortcut>
+        <Command>cm_ChangeEncoding</Command>
+        <Param>ANSI</Param>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>S</Shortcut>
+        <Command>cm_ChangeEncoding</Command>
+        <Param>OEM</Param>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Z</Shortcut>
+        <Command>cm_ChangeEncoding</Command>
+        <Param>UTF-8</Param>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>X</Shortcut>
+        <Command>cm_ChangeEncoding</Command>
+        <Param>UTF-16LE</Param>
       </Hotkey>
     </Form>
     <Form Name="Differ">
@@ -523,6 +531,28 @@
         <Command>cm_SaveDescription</Command>
       </Hotkey>
     </Form>
+    <Form Name="Synchronize Directories">
+      <Hotkey>
+        <Shortcut>Ctrl+M</Shortcut>
+        <Command>cm_SelectClear</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+D</Shortcut>
+        <Command>cm_SelectCopyDefault</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+W</Shortcut>
+        <Command>cm_SelectCopyReverse</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+L</Shortcut>
+        <Command>cm_SelectCopyLeftToRight</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+R</Shortcut>
+        <Command>cm_SelectCopyRightToLeft</Command>
+      </Hotkey>
+    </Form>
     <Form Name="Editor">
       <Hotkey>
         <Shortcut>F7</Shortcut>
@@ -541,16 +571,16 @@
         <Command>cm_EditFindPrevious</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+N</Shortcut>
-        <Command>cm_FileNew</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Esc</Shortcut>
         <Command>cm_FileExit</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+X</Shortcut>
         <Command>cm_EditCut</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+N</Shortcut>
+        <Command>cm_FileNew</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+O</Shortcut>
@@ -583,11 +613,19 @@
     </Form>
     <Form Name="Find Files">
       <Hotkey>
+        <Shortcut>F3</Shortcut>
+        <Command>cm_View</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>F4</Shortcut>
+        <Command>cm_Edit</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>F7</Shortcut>
         <Command>cm_IntelliFocus</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Enter</Shortcut>
+        <Shortcut>F9</Shortcut>
         <Command>cm_Start</Command>
       </Hotkey>
       <Hotkey>
@@ -599,11 +637,19 @@
         <Command>cm_NewSearch</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+Shift+N</Shortcut>
+        <Command>cm_NewSearchClearFilters</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Ctrl+L</Shortcut>
         <Command>cm_LastSearch</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Alt+1</Shortcut>
+        <Command>cm_PageStandard</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Alt+F7</Shortcut>
         <Command>cm_PageStandard</Command>
       </Hotkey>
       <Hotkey>
@@ -623,20 +669,16 @@
         <Command>cm_PageResults</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>F3</Shortcut>
-        <Command>cm_View</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>F4</Shortcut>
-        <Command>cm_Edit</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Shift+N</Shortcut>
-        <Command>cm_NewSearchClearFilters</Command>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Alt+F4</Shortcut>
         <Command>cm_FreeFromMem</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Tab</Shortcut>
+        <Command>cm_PageNext</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+Tab</Shortcut>
+        <Command>cm_PagePrev</Command>
       </Hotkey>
     </Form>
   </Hotkeys>
